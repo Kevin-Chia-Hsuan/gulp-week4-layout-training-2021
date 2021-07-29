@@ -1,0 +1,40 @@
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  @include pc-pad {
+    width: 90%;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: $text-xl;
+  line-height: 1.5;
+  color: $text-color-primary;
+  font-weight: bold;
+  margin-bottom: 40px;
+  @include pad {
+    font-size: $text-m;
+    margin-bottom: 32px;
+  }
+  @include mobile {
+    font-size: $text-sm;
+    margin-bottom: 20px;
+  }
+}
+
+.subtitle {
+  font-size: $text-2xl;
+  line-height: 1.5;
+  font-weight: bold;
+  border-left: 8px solid $border-color-Tertiary;
+  padding-left: 16px;
+  margin-bottom: 60px;
+  @include pad {
+    margin-bottom: 40px;
+  }
+  @include mobile {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+}

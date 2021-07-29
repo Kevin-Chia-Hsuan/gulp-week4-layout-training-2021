@@ -1,0 +1,53 @@
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin center {
+  margin: 0 auto;
+}
+
+@mixin background-type {
+  text-indent: -99999px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+@mixin pc-pad {
+  @media screen and (max-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin pad-py-4 {
+  padding-top: 40px;
+  padding-bottom: 56px;
+}
+
+@mixin mobile-py-4 {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+@mixin pad-py-5 {
+  padding-top: 60px;
+  padding-bottom: 96px;
+}
+
+@mixin mobile-py-5 {
+  padding-top: 28px;
+  padding-bottom: 56px;
+}

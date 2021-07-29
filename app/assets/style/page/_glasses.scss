@@ -1,0 +1,120 @@
+.glasses-header {
+  .tab-menu {
+    display: flex;
+    justify-content: space-between;
+    .active {
+      border-bottom: 8px solid $text-color-Tertiary;
+      @include mobile {
+        border-bottom: 4px solid $text-color-Tertiary;
+      }
+    }
+    li {
+      width: 100%;
+      border: 1px solid $border-color-secondary;
+      img {
+        @include size(44px, 44px);
+        margin-right: 10px;
+        @include pad {
+          @include size(30px, 30px);
+        }
+        @include mobile {
+          @include size(15px, 15px);
+          margin-right: 2px;
+        }
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: $text-m;
+        line-height: 1.5;
+        font-weight: 500;
+        color: $text-color-default;
+        padding-top: 27px;
+        padding-bottom: 19px;
+        &:hover {
+          background: $text-hover-color-primary;
+        }
+        @include pad {
+          font-size: $text-base;
+          padding: 14px 0;
+        }
+        @include mobile {
+          font-size: $text-xs;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+.glasses-banner {
+  display: flex;
+}
+
+/* glasses-product區塊 */
+.glasses-product {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 160px;
+  @include pad {
+    padding-top: 56px;
+    padding-bottom: 96px;
+  }
+  @include mobile {
+    padding-top: 32px;
+    padding-bottom: 56px;
+  }
+  h2 {
+    font-size: $text-xl;
+    line-height: 1.5;
+    @include pad {
+      font-size: $text-m;
+    }
+    @include mobile {
+      font-size: $text-sm;
+    }
+  }
+  h3 {
+    font-size: $text-m;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    @include pad {
+      font-size: $text-base;
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      font-size: $text-s;
+      margin-bottom: 20px;
+    }
+  }
+}
+.glasses-product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .tab01 {
+    width: 24%;
+    @include pad {
+      width: 48%;
+    }
+    @include mobile {
+      width: 98%;
+    }
+    img {
+      @include size(100%, 164px);
+    }
+  }
+  .tab02 {
+    width: 32.3333%;
+    @include pad {
+      width: 48%;
+    }
+    @include mobile {
+      width: 98%;
+    }
+    img {
+      @include size(100%, 224px);
+    }
+  }
+}

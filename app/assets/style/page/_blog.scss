@@ -1,0 +1,131 @@
+.blog {
+  padding-bottom: 160px;
+  @include pad {
+    padding-bottom: 96px;
+  }
+  @include mobile {
+    padding-bottom: 56px;
+  }
+  .subtitle {
+    @include mobile {
+      margin-top: 28px;
+    }
+  }
+}
+.blog-list {
+  li {
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 96px;
+    }
+    @include pad {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 64px;
+      }
+    }
+    @include mobile {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+.blog-card-top {
+  display: flex;
+  justify-content: space-between;
+  @include mobile {
+    display: block;
+  }
+  img {
+    width: 50%;
+    @include pad {
+      height: 208px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  .blog-card-body {
+    position: relative;
+    width: 48%;
+    @include mobile {
+      width: 100%;
+    }
+    .blog-card-title {
+      font-size: $text-m;
+      line-height: 1.5;
+      color: $text-color-primary;
+      margin-bottom: 2px;
+      @include pad {
+        font-size: $text-sm;
+        margin-bottom: 0;
+      }
+      @include mobile {
+        font-size: $text-s;
+      }
+    }
+  }
+  .blog-card-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    h4 {
+      font-size: $text-sm;
+      line-height: 1.5;
+      font-weight: bold;
+      @include pad {
+        font-size: $text-s;
+      }
+      @include mobile {
+        font-size: $text-xs;
+      }
+    }
+    p {
+      font-size: $text-s;
+      line-height: 1.5;
+      @include pad {
+        font-size: $text-xs;
+      }
+    }
+  }
+  .blog-card-text {
+    @include mobile {
+      display: none;
+    }
+    p {
+      font-size: $text-sm;
+      line-height: 1.5;
+      color: $pagination-text-color;
+      @include pad {
+        font-size: $text-xs;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+    }
+    a {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      text-decoration: none;
+      font-size: $text-lg;
+      line-height: 1.5;
+      color: $text-color-primary;
+      font-weight: bold;
+      &:hover {
+        color: $text-hover-color-primary;
+      }
+      @include pad {
+        text-transform: lowercase;
+        font-size: $text-xs;
+        color: $pagination-text-color;
+      }
+    }
+  }
+}
