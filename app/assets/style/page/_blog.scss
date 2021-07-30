@@ -40,15 +40,11 @@
   }
   img {
     width: 50%;
-    @include pad {
-      height: 208px;
-    }
     @include mobile {
       width: 100%;
     }
   }
   .blog-card-body {
-    position: relative;
     width: 48%;
     @include mobile {
       width: 100%;
@@ -100,20 +96,14 @@
       line-height: 1.5;
       color: $pagination-text-color;
       @include pad {
+        display: inline;
         font-size: $text-xs;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
       }
     }
     a {
       display: block;
-      position: absolute;
-      right: 0;
-      bottom: 0;
       text-decoration: none;
+      text-align: right;
       font-size: $text-lg;
       line-height: 1.5;
       color: $text-color-primary;
@@ -122,6 +112,7 @@
         color: $text-hover-color-primary;
       }
       @include pad {
+        display: inline;
         text-transform: lowercase;
         font-size: $text-xs;
         color: $pagination-text-color;
